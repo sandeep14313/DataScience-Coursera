@@ -1,0 +1,27 @@
+x<-read.csv("hw1_data.csv")
+x<-read.csv("hw1_data.csv", row.names = 47)
+x<-read.csv("hw1_data.csv", nrows=2)
+print(x[152])
+print(x[152:153, ])
+x$Ozone[47]
+x[,1]
+y<-is.na(x[,1])
+as.numeric(y)
+sum(as.numeric(y))
+mean(x[, 1])
+Ozone<-na.omit(x$Ozone)
+mean()
+mean(Ozone)
+Ozone<-na.omit(x[, 1])
+mean(Ozone)
+y<-subset(x, Ozone > 31 & Temp > 90)
+mean(y.Solar.R)
+y$Solar.R
+mean(y$Solar.R)
+y<-subset(x,x$Month==6)
+mean(y$Temp)
+y<-subset(x,x$Month==5)
+max(y$Ozone)
+y.Ozone<-na.omit(y$Ozone)
+max(y$Ozone)
+
