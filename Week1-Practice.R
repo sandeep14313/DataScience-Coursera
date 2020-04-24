@@ -67,4 +67,49 @@ x<-matrix(1:4, nrow = 2, ncol = 2)
 dimnames(x)
 dimnames(x)<-list(c("A", "B"), c("C", "D"))
 dimnames(x)
+                  
+data<-read.csv("Demo.csv")
+data
+
+con<-file("Read.txt", 'r')
+data<-read.csv(con)
+close(con)
+data<-read.csv("Read.txt")     #same as the above 3 lines
+
+con<-url("htttp://www.jhsph.edu", "r")
+x<- readlines(con)
+
+x<-list(foo=1:4, bar=0.6)
+x[[1]]
+x$bar
+x$foo
+x["bar"]
+x[["bar"]]
+name="foo"
+x[[name]]
+x[name]
+
+x<-matrix(1:6, 2, 3)
+x[1,3]
+x[1,3, drop=FALSE]
+x[1,, drop=FALSE]
+
+x<-c(1, 2,NA, 4, NaN, 5)
+bad<-is.nan(x)
+x[!bad]
+
+x<-1:4; y<-5:8
+x+y
+x/y
+x>=2
+y<=6
+x==8
+x*y
+
+x<-matrix(1:4, 2, 2)
+y<-matrix(5:8, 2, 2)
+x*y     #element- wise multiplication
+x%*%y   #matrix- multiplication
+
+
 
